@@ -2,6 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<prerequisites>
+		<maven>2.2.1</maven>
+	</prerequisites>
 
 	<groupId>de.st_ddt.crazy.commandhelper</groupId>
 	<artifactId>CommandHelper_CrazyCore</artifactId>
@@ -19,39 +22,41 @@
 	</organization>
 
 	<properties>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-	<prerequisites>
-		<maven>2.2.1</maven>
-	</prerequisites>
-
 	<dependencies>
+		<!-- Bukkit -->
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>bukkit</artifactId>
 			<version>1.6.4-R1.0</version>
 			<type>jar</type>
 		</dependency>
+		<!-- Crazy -->
+		<dependency>
+			<groupId>de.st_ddt.crazy</groupId>
+			<artifactId>CrazyCore</artifactId>
+			<version>10.8-SNAPSHOT</version>
+		</dependency>
+		<!-- Other Plugins -->
+		<dependency>
+			<groupId>com.sk89q</groupId>
+			<artifactId>commandhelper</artifactId>
+			<version>3.3.1-SNAPSHOT</version>
+		</dependency>
+		<!-- Others -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.sk89q</groupId>
-			<artifactId>commandhelper</artifactId>
-			<version>3.3.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>de.st_ddt.crazy</groupId>
-			<artifactId>CrazyCore</artifactId>
-			<version>10.8</version>
-		</dependency>
 	</dependencies>
 
 	<repositories>
+		<!-- Bukkit -->
 		<repository>
 			<id>bukkit-repo</id>
 			<url>http://repo.bukkit.org/content/groups/public</url>
